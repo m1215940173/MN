@@ -1,7 +1,6 @@
 package cn.mn.file_upload;
 
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -16,7 +15,6 @@ import java.util.UUID;
     public class FileUploadService extends HttpServlet {
 
     //文件上传相关代码
-    @RequestMapping(value = "upload")
     @ResponseBody
     public String upload(MultipartFile file) {
         if (file.isEmpty()) {

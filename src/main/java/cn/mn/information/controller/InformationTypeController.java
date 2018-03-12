@@ -18,7 +18,7 @@ import java.util.List;
 @RestController
 @Api(tags ="信息类型")
 @RequestMapping(value = "/informationType")
-public class InformationController {
+public class InformationTypeController {
     @Autowired
     InformationTypeService informationTypeService;
 

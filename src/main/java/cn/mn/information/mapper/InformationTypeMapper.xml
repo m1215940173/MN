@@ -34,4 +34,9 @@
         WHERE id = #{id}
     </delete>
 
+    <select id="selectAll" resultMap="BaseResultMap">
+        SELECT <include refid="all_column" />
+        FROM information_type
+    </select>
+
 </mapper>
