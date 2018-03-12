@@ -35,4 +35,10 @@
         WHERE id = #{id}
     </delete>
 
+    <select id="selectByInformationId" resultMap="BaseResultMap">
+        SELECT <include refid="all_column" />
+        FROM information_type_relation
+        WHERE information_id = #{informationId}
+    </select>
+
 </mapper>

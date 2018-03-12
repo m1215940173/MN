@@ -1,10 +1,11 @@
 package cn.mn.information.service;
 
 import cn.mn.information.dao.InformationFileMapper;
-import cn.mn.information.entity.Information;
 import cn.mn.information.entity.InformationFile;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 /**
  * 信息文件表 服务类
@@ -19,5 +20,8 @@ public class InformationFileService {
     InformationFileMapper baseMapper;
     public void add (InformationFile informationFile){
         baseMapper.insert(informationFile);
+    }
+    public List<InformationFile> getInformationFiles(Integer informationId){
+        return baseMapper.selectByInformationId(informationId);
     }
 }

@@ -2,6 +2,8 @@ package cn.mn.information.dao;
 
 import cn.mn.information.entity.InformationTypeRelation;
 
+import java.util.List;
+
 /**
  * 信息类型关联表 Mapper 接口
  *
@@ -17,4 +19,6 @@ public interface InformationTypeRelationMapper  {
     int updateById(InformationTypeRelation entity);
 
     InformationTypeRelation selectById(Integer id);
+
+    List<InformationTypeRelation> selectByInformationId(Integer informationId);
 }

@@ -28,6 +28,10 @@ public class InformationService {
     InformationTypeRelationService informationTypeRelationService;
     @Autowired
     InformationLabelRelationService informationLabelRelationService;
+    @Autowired
+    InformationLabelService informationLabelService;
+    @Autowired
+    InformationTypeService informationTypeService;
 
     public void addInformation (InformationDto informationDto){
         if(informationDto.getInformation()!=null){
@@ -36,6 +40,7 @@ public class InformationService {
             baseMapper.insert(information);
             if(informationDto.getInformationFileList().size()!=0){
                 for (InformationFile informationFile:informationDto.getInformationFileList()) {
+                    informationFile.setInformationId(information.getId());
                     informationFile.setCreationTime(new Date());
                     informationFileService.add(informationFile);
                 }
@@ -65,9 +70,9 @@ public class InformationService {
         for (Information information:informationList){
             InformationDto informationDto = new InformationDto();
             informationDto.setInformation(information);
-            informationDto.setInformationFileList(null);
-            informationDto.setInformationLabelList(null);
-            informationDto.setInformationTypeList(null);
+            informationDto.setInformationFileList(informationFileService.getInformationFiles(information.getId()));
+            informationDto.setInformationLabelList(informationLabelService.getInformationLabels(information.getId()));
+            informationDto.setInformationTypeList(informationTypeService.getInformationTypes(information.getId()));
             informationDtoList.add(informationDto);
         }
         return informationDtoList;

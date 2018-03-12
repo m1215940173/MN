@@ -2,6 +2,8 @@ package cn.mn.information.dao;
 
 import cn.mn.information.entity.InformationFile;
 
+import java.util.List;
+
 /**
  * 信息文件表 Mapper 接口
  *
@@ -17,4 +19,6 @@ public interface InformationFileMapper  {
     int updateById(InformationFile entity);
 
     InformationFile selectById(Integer id);
+
+    List<InformationFile> selectByInformationId(Integer informationId);
 }

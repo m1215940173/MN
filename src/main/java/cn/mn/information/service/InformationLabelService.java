@@ -1,12 +1,12 @@
 package cn.mn.information.service;
 
 import cn.mn.information.dao.InformationLabelMapper;
-import cn.mn.information.dao.InformationTypeMapper;
 import cn.mn.information.entity.InformationLabel;
-import cn.mn.information.entity.InformationType;
+import cn.mn.information.entity.InformationLabelRelation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -19,6 +19,8 @@ import java.util.List;
 public class InformationLabelService {
     @Autowired
     InformationLabelMapper baseMapper;
+    @Autowired
+    InformationLabelRelationService informationLabelRelationService;
     public List<InformationLabel> getAllLabel(Integer enable){
         return baseMapper.selectAll(enable);
     }
@@ -38,5 +40,13 @@ public class InformationLabelService {
             }
             updateLabel(informationLabel);
         }
+    }
+    public List<InformationLabel> getInformationLabels(Integer informationId){
+        List<InformationLabel> informationLabelList = new ArrayList<>();
+        List<InformationLabelRelation> informationLabelRelations = informationLabelRelationService.getInformationLabelRelations(informationId);
+        for(InformationLabelRelation informationLabelRelation:informationLabelRelations){
+            informationLabelList.add(baseMapper.selectById(informationLabelRelation.getLabelId()));
+        }
+        return informationLabelList;
     }
 }
