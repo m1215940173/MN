@@ -8,6 +8,7 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionFactoryBean;
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -20,6 +21,7 @@ import org.springframework.transaction.annotation.TransactionManagementConfigure
 
 
 @Configuration
+@MapperScan( basePackages = {"cn.mn.*.dao"})
 @EnableTransactionManagement
 public class MybatisConfiguration implements TransactionManagementConfigurer{
 

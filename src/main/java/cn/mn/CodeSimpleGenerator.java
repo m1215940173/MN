@@ -47,7 +47,12 @@ public class CodeSimpleGenerator {
         String parentPackage = "cn.mn.information";
 
         // tables to generate
-        tables.add("information_type");
+        tables.add("information");
+        tables.add("information_file");
+        tables.add("information_label");
+        tables.add("information_label_relation");
+        tables.add("information_type_relation");
+
         // generate files without the prefix
         String ignorePrefix = "";
 
@@ -55,8 +60,8 @@ public class CodeSimpleGenerator {
         boolean entity = true;
         boolean xml = true;
         boolean dao = true;
-        boolean service = false;
-        boolean controller = false;
+        boolean service = true;
+        boolean controller = true;
 
         boolean createBaseResultMap = true;
 
@@ -98,11 +103,11 @@ public class CodeSimpleGenerator {
         if(StringUtils.isNotBlank(ignorePrefix)) {
             strategy.setTablePrefix(new String[]{ignorePrefix});
         }
-        // strategy.setSuperServiceClass("com.test.demo.TestService");
+         /*strategy.setSuperServiceClass("com.test.demo.TestService");
         // 自定义 service 实现类父类
-        // strategy.setSuperServiceImplClass("com.test.demo.TestServiceImpl");
+         strategy.setSuperServiceImplClass("com.test.demo.TestServiceImpl");
         // 自定义 controller 父类
-        // strategy.setSuperControllerClass("com.test.demo.TestController");
+         strategy.setSuperControllerClass("com.test.demo.TestController");*/
         mpg.setStrategy(strategy);
 
         // 包配置

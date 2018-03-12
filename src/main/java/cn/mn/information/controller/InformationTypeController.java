@@ -5,10 +5,7 @@ import cn.mn.information.service.InformationTypeService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -24,13 +21,25 @@ public class InformationTypeController {
 
     @RequestMapping(value = "/get/allType" ,method = RequestMethod.GET)
     @ApiOperation(value = "获取信息类型列表")
-    public List<InformationType> getAllType(){
-        return informationTypeService.getAllType();
+    public List<InformationType> getAllType(@RequestParam Integer enable){
+        return informationTypeService.getAllType(enable);
     }
     @RequestMapping(value = "/add/type" ,method = RequestMethod.PUT)
     @ApiOperation(value = "添加信息类型")
-    public String addType(@RequestBody InformationType informationType){
+    public InformationType addType(@RequestBody InformationType informationType){
         informationTypeService.addType(informationType);
-        return "添加成功";
+        return informationType;
+    }
+    @RequestMapping(value = "/update/type" ,method = RequestMethod.POST)
+    @ApiOperation(value = "修改信息类型")
+    public InformationType updateType(@RequestBody InformationType informationType){
+        informationTypeService.updateType(informationType);
+        return informationType;
+    }
+    @RequestMapping(value = "/update/enable" ,method = RequestMethod.POST)
+    @ApiOperation(value = "启用禁用")
+    public String updateEnable(@RequestParam Integer id){
+        informationTypeService.updateEnable(id);
+        return "修改成功";
     }
 }

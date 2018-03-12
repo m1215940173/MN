@@ -5,19 +5,19 @@ import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
 /**
- * 信息类型表
+ * 信息标签表
  *
  * @author menfajin
- * @since 2018-03-09
+ * @since 2018-03-12
  */
 @Data
-public class InformationType {
+public class InformationLabel {
 
     @ApiModelProperty(value = "id")
     private Integer id;
 
-    @ApiModelProperty(value = "类型")
-    private String type;
+    @ApiModelProperty(value = "标签")
+    private String label;
 
     @ApiModelProperty(value = "是否启用")
     private Integer enable;

@@ -1,7 +1,6 @@
 package cn.mn.information.dao;
 
 import cn.mn.information.entity.InformationType;
-import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;
 
@@ -11,7 +10,6 @@ import java.util.List;
  * @author menfajin
  * @since 2018-03-09
  */
-@Mapper
 public interface InformationTypeMapper  {
 
     int insert(InformationType entity);
@@ -20,5 +18,7 @@ public interface InformationTypeMapper  {
 
     int updateById(InformationType entity);
 
-    List<InformationType> selectAll();
+    InformationType selectById(Integer id);
+
+    List<InformationType> selectAll(Integer enable);
 }
