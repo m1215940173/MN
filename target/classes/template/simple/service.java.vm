@@ -1,0 +1,20 @@
+package ${package.Service};
+
+import ${package.Mapper}.${table.mapperName};
+import ${package.Entity}.${entity};
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+/**
+ * $!{table.comment} 服务类
+ *
+ * @author ${author}
+ * @since ${date}
+ */
+@Service
+public class ${table.serviceName} {
+
+    @Autowired
+    ${table.mapperName} baseMapper;
+
+}

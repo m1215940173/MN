@@ -1,0 +1,69 @@
+package ${package.Entity};
+
+#foreach($pkg in ${table.importPackages})
+#if(!${pkg.contains("mybatisplus")} && !${pkg.contains("Serializable")})
+import ${pkg};
+#end
+#end
+import io.swagger.annotations.ApiModelProperty;
+#if(${entityLombokModel})
+
+import lombok.Data;
+#end
+
+/**
+ * $!{table.comment}
+ *
+ * @author ${author}
+ * @since ${date}
+ */
+#if(${entityLombokModel})
+@Data
+#end
+#if(${superEntityClass})
+public class ${entity} extends ${superEntityClass}#if(${activeRecord})<${entity}>#end {
+#elseif(${activeRecord})
+public class ${entity} extends Model<${entity}> {
+#else
+public class ${entity} {
+#end
+
+#foreach($field in ${table.fields})
+#if(${field.keyFlag})
+#set($keyPropertyName=${field.propertyName})
+#end
+    @ApiModelProperty(value = "#if("$!field.comment" != "")${field.comment}#else${field.propertyName}#end")
+    private ${field.propertyType} ${field.propertyName};
+
+#end
+#if(!${entityLombokModel})
+#foreach($field in ${table.fields})
+#if(${field.propertyType.equals("Boolean")})
+#set($getprefix="is")
+#else
+#set($getprefix="get")
+#end
+
+    public ${field.propertyType} ${getprefix}${field.capitalName}() {
+		return ${field.propertyName};
+	}
+
+#if(${entityBuilderModel})
+	public ${entity} set${field.capitalName}(${field.propertyType} ${field.propertyName}) {
+#else
+	public void set${field.capitalName}(${field.propertyType} ${field.propertyName}) {
+#end
+		this.${field.propertyName} = ${field.propertyName};
+#if(${entityBuilderModel})
+		return this;
+#end
+	}
+#end
+#end
+#if(${entityColumnConstant})
+#foreach($field in ${table.fields})
+	public static final String ${field.name.toUpperCase()} = "${field.name}";
+
+#end
+#end
+}

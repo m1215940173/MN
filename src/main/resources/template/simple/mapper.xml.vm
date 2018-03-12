@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="${package.Mapper}.${table.mapperName}">
+#if(${enableCache})
+	<!-- 开启二级缓存 -->
+	<cache type="org.mybatis.caches.ehcache.LoggingEhcache"/>
+#end
+#if(${baseResultMap})
+	<!-- 通用映射 -->
+	<resultMap id="BaseResultMap" type="${package.Entity}.${entity}">
+#foreach($field in ${table.fields})
+#if(${field.keyFlag})##生成主键排在第一位
+		<id column="${field.name}" property="${field.propertyName}" />
+#end
+#end
+#foreach($field in ${table.commonFields})##生成公共字段
+	<result column="${field.name}" property="${field.propertyName}" />
+#end
+#foreach($field in ${table.fields})
+#if(!${field.keyFlag})##生成普通字段
+		<result column="${field.name}" property="${field.propertyName}" />
+#end
+#end
+	</resultMap>
+#end
+#if(${baseColumnList})
+    <!-- 通用字段 -->
+    <sql id="all_column">
+#if(true)        #end
+#set($idx = 1)
+#set($size = ${table.fields.size()})
+#foreach($field in ${table.fields})
+#if($idx < $size)${field.name}, #else${field.name}#end#set($idx = $idx +1)
+#end
+
+    </sql>
+    <!-- 通用插入 -->
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id" >
+        INSERT INTO ${table.name}
+        (#set($idx = 1)
+#set($size = ${table.fields.size()})
+#foreach($field in ${table.fields})
+#if($idx == 1)#set($idx = $idx +1)
+#else
+#if($idx < $size)${field.name}, #else${field.name}#end#set($idx = $idx +1)
+#end
+#end)
+        VALUES (#set($idx = 1)
+#set($size = ${table.fields.size()})
+#foreach($field in ${table.fields})
+#if($idx == 1)#set($idx = $idx +1)
+#else
+#if($idx < $size)#{${field.propertyName}}, #else#{${field.propertyName}}#end#set($idx = $idx +1)
+#end
+#end)
+	</insert>
+    <!-- 通用更新 -->
+    <update id="updateById">
+        UPDATE ${table.name}
+        SET #set($idx = 1)
+#set($size = ${table.fields.size()})
+#foreach($field in ${table.fields})
+#if($idx == 1)#set($idx = $idx +1)
+#else
+#if($idx < $size)${field.name} = #{${field.propertyName}}, #else${field.name} = #{${field.propertyName}}#end#set($idx = $idx +1)
+#end
+#end
+
+        WHERE id = #{id}
+    </update>
+    <!-- 通用按主键查询 -->
+    <select id="selectById" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+        SELECT <include refid="all_column" />
+        FROM ${table.name}
+        WHERE id = #{id}
+    </select>
+    <!-- 通用按主键删除 -->
+    <delete id="deleteById" parameterType="java.lang.Integer" >
+        DELETE FROM ${table.name}
+        WHERE id = #{id}
+    </delete>
+
+#end
+</mapper>
