@@ -1,11 +1,13 @@
 package cn.mn.information.service;
 
+import cn.mn.file_upload.service.FileUploadService;
+import cn.mn.file_upload.vo.FileLocation;
 import cn.mn.information.dao.InformationMapper;
 import cn.mn.information.dto.InformationDto;
 import cn.mn.information.entity.*;
-import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -32,19 +34,14 @@ public class InformationService {
     InformationLabelService informationLabelService;
     @Autowired
     InformationTypeService informationTypeService;
+    @Autowired
+    FileUploadService fileUploadService;
 
     public void addInformation (InformationDto informationDto){
         if(informationDto.getInformation()!=null){
             Information information = informationDto.getInformation();
             information.setCreationTime(new Date());
             baseMapper.insert(information);
-            if(informationDto.getInformationFileList().size()!=0){
-                for (InformationFile informationFile:informationDto.getInformationFileList()) {
-                    informationFile.setInformationId(information.getId());
-                    informationFile.setCreationTime(new Date());
-                    informationFileService.add(informationFile);
-                }
-            }
             if(informationDto.getInformationTypeList().size()!=0){
                 for(InformationType informationType:informationDto.getInformationTypeList()){
                     InformationTypeRelation informationTypeRelation = new InformationTypeRelation();
@@ -76,5 +73,11 @@ public class InformationService {
             informationDtoList.add(informationDto);
         }
         return informationDtoList;
+    }
+
+    public FileLocation uploadFile(MultipartFile multipartFile){
+        FileLocation fileLocation = fileUploadService.upload(multipartFile);
+         fileUploadService.view(fileLocation);
+        return fileLocation;
     }
 }

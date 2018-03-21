@@ -1,5 +1,6 @@
-package cn.mn.file_upload;
+package cn.mn.file_upload.service;
 
+import cn.mn.file_upload.vo.FileLocation;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
@@ -16,10 +17,7 @@ import java.util.UUID;
 
     //文件上传相关代码
     @ResponseBody
-    public String upload(MultipartFile file) {
-        if (file.isEmpty()) {
-            return "文件为空";
-        }
+    public FileLocation upload(MultipartFile file) {
         // 获取文件名
         String fileName = file.getOriginalFilename();
         // 获取文件的后缀名
@@ -35,13 +33,19 @@ import java.util.UUID;
         }
         try {
             file.transferTo(dest);
-            return "上传成功";
         } catch (IllegalStateException e) {
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }
-        return "上传失败";
+        return new FileLocation(fileName,  "file"+ File.separator + fileName);
+    }
+
+    public void view(FileLocation file) {
+        file.setHost("http:\\39.106.129.123\\");
+        if (null != file.getPath() && !file.getPath().startsWith("http")) {
+            file.setUrl(file.getHost() + file.getPath());
+        }
     }
 
 }

@@ -1,15 +1,16 @@
 package cn.mn.information.controller;
 
+import cn.mn.file_upload.vo.FileLocation;
 import cn.mn.information.dto.InformationDto;
+import cn.mn.information.entity.InformationFile;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import cn.mn.information.service.InformationService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.multipart.MultipartFile;
 
+import javax.servlet.http.HttpSession;
 import java.util.List;
 
 /**
@@ -30,6 +31,16 @@ public class InformationController {
     public String add(@RequestBody InformationDto informationDto){
         informationService.addInformation(informationDto);
         return "发布成功";
+    }
+    @RequestMapping(value = "/uploadFile",method = RequestMethod.POST)
+    @ApiOperation(value = "上传文件")
+    public FileLocation uploadFile(@RequestParam MultipartFile multipartFile){
+        return informationService.uploadFile(multipartFile);
+    }
+    @RequestMapping(value = "/uploadInformation",method = RequestMethod.POST)
+    @ApiOperation(value = "上传文件信息")
+    public void uploadFile(@RequestBody InformationFile informationFile){
+        informationService.uploadFile(null);
     }
     @RequestMapping(value = "/getList",method = RequestMethod.GET)
     @ApiOperation(value = "信息列表")
