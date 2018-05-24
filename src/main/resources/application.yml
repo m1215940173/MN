@@ -1,1 +1,11 @@
+#版本
+spring.profiles.active: dev
+
+---
+spring.profiles: dev
 server.port: 80
+upload.file.path: http://localhost/
+---
+spring.profiles: 39
+server.port: 1994
+upload.file.path: http://39.106.129.123/

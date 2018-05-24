@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.mn.project.information.dao.InformationLabelRelationMapper">
+	<!-- 通用映射 -->
+	<resultMap id="BaseResultMap" type="cn.mn.project.information.entity.InformationLabelRelation">
+		<id column="id" property="id" />
+		<result column="information_id" property="informationId" />
+		<result column="label_id" property="labelId" />
+	</resultMap>
+    <!-- 通用字段 -->
+    <sql id="all_column">
+        id, information_id, label_id
+    </sql>
+    <!-- 通用插入 -->
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id" >
+        INSERT INTO information_label_relation
+        (information_id, label_id)
+        VALUES (#{informationId}, #{labelId})
+	</insert>
+    <!-- 通用更新 -->
+    <update id="updateById">
+        UPDATE information_label_relation
+        SET information_id = #{informationId}, label_id = #{labelId}
+        WHERE id = #{id}
+    </update>
+    <!-- 通用按主键查询 -->
+    <select id="selectById" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+        SELECT <include refid="all_column" />
+        FROM information_label_relation
+        WHERE id = #{id}
+    </select>
+    <!-- 通用按主键删除 -->
+    <delete id="deleteById" parameterType="java.lang.Integer" >
+        DELETE FROM information_label_relation
+        WHERE id = #{id}
+    </delete>
+
+    <select id="selectByInformationId" resultMap="BaseResultMap">
+        SELECT <include refid="all_column" />
+        FROM information_label_relation
+        WHERE information_id = #{informationId}
+    </select>
+
+</mapper>
