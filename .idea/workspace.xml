@@ -2,50 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="971dd347-2391-46e5-a9c7-87c73263f5d7" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mona.iml" beforeDir="false" afterPath="$PROJECT_DIR$/mona.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/mn/file_upload/service/FileUploadService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/mn/tools/fileupload/service/FileUploadService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/mn/file_upload/vo/FileLocation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/mn/tools/fileupload/vo/FileLocation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/mn/information/controller/InformationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/mn/project/information/controller/InformationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/mn/information/controller/InformationLabelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/mn/project/information/controller/InformationLabelController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/mn/information/controller/InformationTypeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/mn/project/information/controller/InformationTypeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/mn/information/dao/InformationFileMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/mn/project/information/dao/InformationFileMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/mn/information/dao/InformationLabelMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/mn/project/information/dao/InformationLabelMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/mn/information/dao/InformationLabelRelationMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/mn/project/information/dao/InformationLabelRelationMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/mn/information/dao/InformationMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/mn/project/information/dao/InformationMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/mn/information/dao/InformationTypeMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/mn/project/information/dao/InformationTypeMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/mn/information/dao/InformationTypeRelationMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/mn/project/information/dao/InformationTypeRelationMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/mn/information/dto/InformationDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/mn/project/information/dto/InformationDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/mn/information/entity/Information.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/mn/project/information/entity/Information.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/mn/information/entity/InformationFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/mn/project/information/entity/InformationFile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/mn/information/entity/InformationLabel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/mn/project/information/entity/InformationLabel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/mn/information/entity/InformationLabelRelation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/mn/project/information/entity/InformationLabelRelation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/mn/information/entity/InformationType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/mn/project/information/entity/InformationType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/mn/information/entity/InformationTypeRelation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/mn/project/information/entity/InformationTypeRelation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/mn/information/mapper/InformationFileMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/mn/project/information/mapper/InformationFileMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/mn/information/mapper/InformationLabelMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/mn/project/information/mapper/InformationLabelMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/mn/information/mapper/InformationLabelRelationMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/mn/project/information/mapper/InformationLabelRelationMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/mn/information/mapper/InformationMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/mn/project/information/mapper/InformationMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/mn/information/mapper/InformationTypeMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/mn/project/information/mapper/InformationTypeMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/mn/information/mapper/InformationTypeRelationMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/mn/project/information/mapper/InformationTypeRelationMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/mn/information/service/InformationFileService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/mn/project/information/service/InformationFileService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/mn/information/service/InformationLabelRelationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/mn/project/information/service/InformationLabelRelationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/mn/information/service/InformationLabelService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/mn/project/information/service/InformationLabelService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/mn/information/service/InformationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/mn/project/information/service/InformationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/mn/information/service/InformationTypeRelationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/mn/project/information/service/InformationTypeRelationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/mn/information/service/InformationTypeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/mn/project/information/service/InformationTypeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/mn/plug/MybatisConfiguration.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/mn/plug/Swagger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/mn/config/Swagger.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/mn/plug/WebAppConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/mn/config/WebAppConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/mn/information/controller/InformationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/mn/information/controller/InformationController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/mn/information/dao/InformationTypeMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/mn/information/dao/InformationTypeMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/mn/information/service/InformationService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/mn/information/service/InformationService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/mn/plug/Swagger.class" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -61,8 +18,8 @@
       <file leaf-file-name="FileUploadService.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/cn/mn/tools/fileupload/service/FileUploadService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="402">
-              <caret line="32" column="42" lean-forward="true" selection-start-line="32" selection-start-column="42" selection-end-line="32" selection-end-column="42" />
+            <state relative-caret-position="193">
+              <caret line="21" column="16" lean-forward="true" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -325,57 +282,6 @@
               <item name="men" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="mn" type="462c0819:PsiDirectoryNode" />
-              <item name="project" type="462c0819:PsiDirectoryNode" />
-              <item name="information" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mona" type="b2602c69:ProjectViewProjectNode" />
-              <item name="men" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="mn" type="462c0819:PsiDirectoryNode" />
-              <item name="project" type="462c0819:PsiDirectoryNode" />
-              <item name="information" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mona" type="b2602c69:ProjectViewProjectNode" />
-              <item name="men" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="mn" type="462c0819:PsiDirectoryNode" />
-              <item name="tools" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mona" type="b2602c69:ProjectViewProjectNode" />
-              <item name="men" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="mn" type="462c0819:PsiDirectoryNode" />
-              <item name="tools" type="462c0819:PsiDirectoryNode" />
-              <item name="fileupload" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mona" type="b2602c69:ProjectViewProjectNode" />
-              <item name="men" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="mn" type="462c0819:PsiDirectoryNode" />
-              <item name="tools" type="462c0819:PsiDirectoryNode" />
-              <item name="fileupload" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mona" type="b2602c69:ProjectViewProjectNode" />
-              <item name="men" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -584,12 +490,20 @@
       <workItem from="1527062226451" duration="1045000" />
       <workItem from="1527063278976" duration="3556000" />
       <workItem from="1527067983420" duration="174000" />
-      <workItem from="1527120816676" duration="17722000" />
+      <workItem from="1527120816676" duration="18468000" />
     </task>
+    <task id="LOCAL-00001" summary="修改配置">
+      <created>1527154839260</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1527154839260</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="83152000" />
+    <option name="totallyTimeSpent" value="83898000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -621,14 +535,14 @@
       <window_info id="Image Layers" order="2" />
       <window_info anchor="bottom" id="Java Enterprise" order="7" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="7" visible="true" weight="0.32897604" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32897604" />
       <window_info anchor="bottom" id="Spring" order="7" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25266525" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25266525" />
       <window_info anchor="right" id="Bean Validation" order="3" />
       <window_info id="Web" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.32897604" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32897604" />
       <window_info anchor="right" id="Theme Preview" order="3" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -650,6 +564,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="修改配置" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改配置" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -976,8 +894,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/mn/tools/fileupload/service/FileUploadService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="402">
-          <caret line="32" column="42" lean-forward="true" selection-start-line="32" selection-start-column="42" selection-end-line="32" selection-end-column="42" />
+        <state relative-caret-position="193">
+          <caret line="21" column="16" lean-forward="true" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
