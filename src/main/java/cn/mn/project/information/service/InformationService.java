@@ -5,7 +5,6 @@ import cn.mn.tools.fileupload.service.FileUploadService;
 import cn.mn.tools.fileupload.vo.FileLocation;
 import cn.mn.project.information.dao.InformationMapper;
 import cn.mn.project.information.dto.InformationDto;
-import cn.mn.information.entity.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
